@@ -1,0 +1,55 @@
+page{
+	background: #F2F2F2;
+}
+.store{
+	box-sizing: border-box;
+	padding:5% 0%;
+}
+.list-left{
+	border-bottom: solid 1rpx #EFEFEF;
+	width: 50%;
+	height: 90rpx;
+	line-height:90rpx;
+	box-sizing: border-box;
+	padding-left:30rpx;
+}
+.text{
+	margin-left: 30rpx;
+}
+
+.bg2{
+	height: 20rpx;
+}
+.bag{
+	height: 100rpx;
+	line-height: 100rpx;
+	box-sizing: border-box;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+.bag2{
+	height: 100rpx;
+	height: 180rpx;
+	box-sizing: border-box;
+	padding: 5%;
+}
+
+
+.choose{
+	width: 100%;
+	box-sizing: border-box;
+	padding: 30rpx;
+}
+.choose-top image{
+	width: 27rpx; 
+	height: 27rpx; 
+	margin-right: 10rpx;
+	position: relative;
+	top: 4rpx;
+}
+.choose-btm{
+	margin-top: 30rpx;
+}
+
+
+

@@ -1,0 +1,44 @@
+<!--logs.wxml-->
+<view class="box bg1 radiu15">
+	<view>
+		<view class="ilblock color1 font26">身高<text class="color3 font20">cm</text></view>
+		<view class="font22 color3 ilblock" style="margin-left: 50rpx;">183</view>
+	</view>
+	<view style="border-bottom: solid 1rpx #F0F0F0; padding-bottom: 15rpx;">
+		<view class="ilblock color1 font26">体重<text class="color3 font20">kg</text></view>
+		<view class="font22 color3 ilblock" style="margin-left: 50rpx;">70</view>
+	</view>
+	<view>
+		<view class="ilblock radiu50">
+			<image src="../../image/appointment-icon3.png" style="width: 22rpx;height: 22rpx; position: relative;top: 5rpx;"></image>
+		</view>
+		<label class="color2 font22" style="margin-left: 10rpx;">默认尺寸</label>
+		
+		<view class="ilblock flo-right" style="margin-right: 60rpx;">
+			<view class="ilblock font20"><image src="../../image/address-icon1.png" style="width: 22rpx;height: 22rpx; margin-right: 20rpx;"></image><text class="color3">编辑</text></view>
+			<view class="ilblock font20" style="margin-left: 20px;"><image src="../../image/address-icon2.png" style="width: 24rpx;height: 22rpx; margin-right: 20rpx;"></image><text class="color3">删除</text></view>
+		</view>
+	</view>
+</view>
+<view class="box bg1 radiu15">
+	<view>
+		<view class="ilblock color1 font26">身高<text class="color3 font20">cm</text></view>
+		<view class="font22 color3 ilblock" style="margin-left: 50rpx;">183</view>
+	</view>
+	<view style="border-bottom: solid 1rpx #F0F0F0; padding-bottom: 15rpx;">
+		<view class="ilblock color1 font26">体重<text class="color3 font20">kg</text></view>
+		<view class="font22 color3 ilblock" style="margin-left: 50rpx;">70</view>
+	</view>
+	<view>
+		<view class="ilblock radiu50">
+			<image src="../../image/address-icon4.png" style="width: 22rpx;height: 22rpx; position: relative;top: 5rpx;"></image>
+		</view>
+		<label class="color2 font22" style="margin-left: 10rpx;">默认尺寸</label>
+		
+		<view class="ilblock flo-right" style="margin-right: 60rpx;">
+			<view class="ilblock font20"><image src="../../image/address-icon1.png" style="width: 22rpx;height: 22rpx; margin-right: 20rpx;"></image><text class="color3">编辑</text></view>
+			<view class="ilblock font20" style="margin-left: 20px;"><image src="../../image/address-icon2.png" style="width: 24rpx;height: 22rpx; margin-right: 20rpx;"></image><text class="color3">删除</text></view>
+		</view>
+	</view>
+</view>
+	<button class="bg3 radiu15 font24 color5" type="button"bindtap="intoPath" data-path="/pages/add_size/add_size">添加尺寸</button>

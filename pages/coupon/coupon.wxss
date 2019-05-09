@@ -1,0 +1,36 @@
+.box{
+	width: 80%;
+	margin: 5% 10%;
+	height: 210rpx;
+	position: relative;
+	z-index: 1;
+}
+.box image{
+	width: 100%;
+	height: 100%;
+}
+.box-left{
+	height: 100%;
+	width: 73%;
+	text-align: center;
+}
+.text1{
+	position: relative;
+	top: -15rpx;
+}
+.box-right{
+	height: 100%;
+	width:26%;
+	float: right;
+	text-align: center;
+}
+.boxf{
+	width: 60%;
+	font-size: 34rpx;
+	color: #272727;
+	position: relative;
+	top: 55rpx;
+	left: 30rpx;
+	}
+	
+

@@ -1,0 +1,14 @@
+
+.box{
+	box-shadow: 0rpx 0rpx 20rpx #A5A5A5;
+	width: 90%;
+	margin: 5%;
+	box-sizing: border-box;
+	padding: 30rpx;
+	background: #fff;
+}
+button{
+	width: 80%;
+	height: 70rpx;
+	margin: 200rpx auto 40rpx;
+}

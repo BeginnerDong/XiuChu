@@ -1,0 +1,47 @@
+<view class="box">
+	<image src="../../image/home-img.png" style="width: 100%; height: 100%;"></image>
+	<view class="top">
+		<view class="top-top"></view>
+		
+		<view class="top-mid">
+			<view class="ilblock" style="width: 15%;text-align: center;">
+				<image src="../../image/home-icon2.png"></image>
+			</view>
+			
+			<view class="ilblock top-mid-center" bindtap="intoPath" data-path="/pages/store_details/store_details"></view>
+			
+			<view class="ilblock" style="width: 15%;text-align: center;">
+				<image src="../../image/home-icon3.png"></image>
+			</view>
+		</view>
+		
+		<view class="top-btm">
+			<view class="top-btm-left ilblock"></view>
+			<view class="top-btm-right ilblock flo-right">
+				<view bindtap="intoPath" data-path="/pages/make/make">
+					<view class="radiu50 hiden" style="width: 90rpx; height: 90rpx;">
+						<image src="../../image/home-icon1.png" style="width: 100%; height: 100%;"></image>
+					</view>
+					<view class="font26 color5" style="text-align: center; margin-top: 20rpx;">预约</view>
+				</view>
+				<view style="margin-top: 35rpx;">
+					<view class="radiu50 hiden" style="width: 90rpx; height: 90rpx;" bindtap="intoPath" data-path="/pages/user/user">
+						<image src="../../image/home-img2.png" style="width: 100%; height: 100%;"></image>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+<view class="video-box" style="display: none;">
+	<view class="video">
+		<image src="../../image/微信图片_20190509104739.png" style="width: 100%;height: 100%;"></image>
+		<view class="color5 radiu50 font24" style="height: 100rpx; width: 100rpx; background: #000000; position: absolute; top: 0rpx;right: 0rpx;line-height: 100rpx; text-align: center; ">跳过</view>
+		<image src="../../image/play-icon.png" style="width: 110rpx; height: 110rpx;position:absolute; top: 44%; left: 45%;"></image>
+	</view>
+</view>
+
+<view class="btm">
+	<view class="color5 font30 overflow1">标题标题标题</view>
+	<view class="color4 font28" style="margin-top: 15rpx;">￥2235起</view>
+</view>

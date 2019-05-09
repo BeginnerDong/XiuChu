@@ -1,0 +1,56 @@
+<view class="topnav bg1">
+	<view class="top-item itemstar {{num == 0?'itemstar':''}}" data-id="0" bindtap="{{web_buttonCanClick?'menuClick':''}}">
+		已领取
+	</view>
+	<view class="top-item {{num == 1?'itemstar':''}}" data-id="1" bindtap="{{web_buttonCanClick?'menuClick':''}}">
+		已使用
+	</view>
+	<view class="top-item {{num == 2?'itemstar':''}}" data-id="2" bindtap="{{web_buttonCanClick?'menuClick':''}}">
+		已过期
+	</view>
+</view>
+<!-- <view class="box" style="background: url(../../image/coupons-img1.png) no-repeat; background-size: 100%;">
+	<view class="box-top">
+		<view class="color5 box-left ilblock">
+			<view style="font-size: 110rpx;">30<text class="font30">元</text>
+			</view>
+			<view class="font22 text1">满399元使用</view>
+			<view style="font-size: 14rpx;">2019年4月3日-2019年5月15日</view>
+		</view>
+		<view class="ilblock box-right">
+			<view class="boxf">
+				立即领取
+			</view>
+		</view>
+	</view>
+</view> -->
+<view class="box" style="background: url(../../image/001.png) no-repeat; background-size: 100%;">
+	<view class="box-top">
+		<view class="color5 box-left ilblock">
+			<view style="font-size: 110rpx;">30<text class="font30">元</text>
+			</view>
+			<view class="font22 text1">满399元使用</view>
+			<view style="font-size: 14rpx;">2019年4月3日-2019年5月15日</view>
+		</view>
+	</view>
+</view>
+<view class="box" style="background: url(../../image/002.png) no-repeat; background-size: 100%;">
+	<view class="box-top">
+		<view class="color5 box-left ilblock">
+			<view style="font-size: 110rpx;">30<text class="font30">元</text>
+			</view>
+			<view class="font22 text1">满399元使用</view>
+			<view style="font-size: 14rpx;">2019年4月3日-2019年5月15日</view>
+		</view>
+	</view>
+</view>
+<view class="box" style="background: url(../../image/003.png) no-repeat; background-size: 100%;">
+	<view class="box-top">
+		<view class="color5 box-left ilblock">
+			<view style="font-size: 110rpx;">30<text class="font30">元</text>
+			</view>
+			<view class="font22 text1">满399元使用</view>
+			<view style="font-size: 14rpx;">2019年4月3日-2019年5月15日</view>
+		</view>
+	</view>
+</view>

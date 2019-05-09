@@ -1,0 +1,58 @@
+.topnav{
+	width: 100%;
+	height: 90rpx;
+	font-size: 26rpx;
+	line-height: 90rpx;
+	text-align: center;
+	color: rgb(153,153,153);
+	flex-wrap: nowrap;
+}
+.top-item{
+	display: inline-block;
+	float: left;
+	width: 33.3%;
+	border-bottom: solid 1rpx #F0F0F0;
+}
+.itemstar{
+	font-size: 30rpx;
+	color:#D5B880;
+	border-bottom: solid 5rpx #D5B880;
+}
+
+
+.box{
+	width: 80%;
+	margin: 5% 10%;
+	height: 210rpx;
+	position: relative;
+	z-index: 1;
+}
+.box image{
+	width: 100%;
+	height: 100%;
+}
+.box-left{
+	height: 100%;
+	width: 73%;
+	text-align: center;
+}
+.text1{
+	position: relative;
+	top: -15rpx;
+}
+.box-right{
+	height: 100%;
+	width:26%;
+	float: right;
+	text-align: center;
+}
+.boxf{
+	width: 60%;
+	font-size: 34rpx;
+	color: #272727;
+	position: relative;
+	top: 55rpx;
+	left: 30rpx;
+	}
+	
+

@@ -1,0 +1,26 @@
+<view class="list bg1">
+	<view class="ilblock color1 font26">身高<text class="color3 font20">cm</text></view>
+	<input class="ilblock color2 font22" placeholder="请输入身高" style="margin-left: 50rpx;position: relative; top: 17rpx;"/>
+</view>
+<view class="list bg1">
+	<view class="ilblock color1 font26">体重<text class="color3 font20">cm</text></view>
+	<input class="ilblock color2 font22" placeholder="请输入体重" style="margin-left: 50rpx;position: relative; top: 17rpx;"/>
+</view>
+<view class="list bg1">
+	<view class="ilblock color1 font26">胸围<text class="color3 font20">cm</text></view>
+	<input class="ilblock color2 font22" placeholder="请输入胸围" style="margin-left: 50rpx;position: relative; top: 17rpx;"/>
+</view>
+<view class="list bg1">
+	<view class="ilblock color1 font26">身高<text class="color3 font20">cm</text></view>
+	<input class="ilblock color2 font22" placeholder="请输入腰围" style="margin-left: 50rpx;position: relative; top: 17rpx;"/>
+</view>
+<view class="list bg1">
+	<view class="ilblock color1 font26">腰围<text class="color3 font20">cm</text></view>
+	<input class="ilblock color2 font22" placeholder="请输入臂长" style="margin-left: 50rpx;position: relative; top: 17rpx;"/>
+</view>
+<view class="list bg1">
+	<view class="ilblock color1 font26">肩宽<text class="color3 font20">cm</text></view>
+	<input class="ilblock color2 font22" placeholder="请输入肩宽" style="margin-left: 50rpx;position: relative; top: 17rpx;"/>
+</view>
+
+<button class="bg3 radiu15 font24 color5" type="button"bindtap="intoPath" data-path="/pages/add_size/add_size">确认</button>
