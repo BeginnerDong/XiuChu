@@ -1,0 +1,25 @@
+<view class="box-img">
+	<image src="../../image/details-img.png"></image>
+</view>
+<view class="text-box">
+	<view class="text-title color7">公司简介</view>
+	<view class="title-btm color7 font22">COMPANY PROFILE</view>
+	<view class="text color2 font26">
+		内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+		内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+	</view>
+	<view class="text color2 font26">
+		内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+		内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+	</view>
+</view>
+<view class="box-img">
+	<image src="../../image/details-img.png"></image>
+</view>
+<view class="text-box">
+	<view class="text color2 font26">
+		内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+		内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+	</view>
+</view>
+

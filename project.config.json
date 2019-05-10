@@ -34,7 +34,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 78,
+			"current": 80,
 			"list": [
 				{
 					"id": -1,
@@ -507,7 +507,19 @@
 				{
 					"id": -1,
 					"name": "我的尺码",
-					"pathName": "pages/mysize/mysize"
+					"pathName": "pages/mysize/mysize",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "售后",
+					"pathName": "pages/service/service",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "关于",
+					"pathName": "pages/about/about"
 				}
 			]
 		}

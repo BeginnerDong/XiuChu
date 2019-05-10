@@ -10,7 +10,7 @@
 </view>
 <view class="list bg1">
 	<view class="ilblock color1 font26">所在地区</view>
-	<view class="color2 font22 flo-right" style="border: solid 1rpx #F3F3F3; width: 76%; height: 70%; margin-top: 10rpx;">
+	<view class="color2 font22 flo-right" style="border: solid 1rpx #F3F3F3; width: 76%; height: 70%; margin-top: 10rpx;" bindtap="show">
 		<image class="flo-right" src="../../image/address-icon3.png" style="width: 20rpx; height: 20rpx;margin: 20rpx;"></image>
 	 </view>
 </view>
@@ -27,7 +27,7 @@
 
 <button class="bg3 radiu15 font24 color5" style="line-height: 60rpx;" type="button">保存</button>
 
-<view class="add_addres" style="display: none;">
+<view class="add_addres" wx:if="{{is_show}}">
 	<view class="bg1">
 		<view class="ilblock bg1_item1">
 			省
@@ -66,7 +66,7 @@
 		</view>
 		
 		<view style="width: 100%;position: absolute; bottom: 0rpx;">
-			<view class="ilblock bg1_item3" style="color:#A3A3A3;">
+			<view class="ilblock bg1_item3" style="color:#A3A3A3;" bindtap="show">
 				取消
 			</view>
 			<view class="ilblock bg1_item3">

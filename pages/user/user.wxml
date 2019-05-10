@@ -65,19 +65,19 @@
 	 <image src="../../image/appointment-icon2.png" style="width: 12rpx; height: 21rpx;margin-left: 10rpx;"></image>
 	 </view>
 </view>
-<view class="list bg1"  bindtap="intoPath" data-path="/pages/feedback/feedback">
+<view class="list bg1"  bindtap="intoPath" data-path="/pages/service/service">
 	<view class="ilblock color1 font30">售后准则</view>
 	<view class="color2 font24 flo-right">
 	 <image src="../../image/appointment-icon2.png" style="width: 12rpx; height: 21rpx;margin-left: 10rpx;"></image>
 	 </view>
 </view>
-<view class="list bg1"  bindtap="intoPath" data-path="/pages/feedback/feedback">
+<view class="list bg1">
 	<view class="ilblock color1 font30">联系客服</view>
 	<view class="color2 font24 flo-right">
 	 <image src="../../image/appointment-icon2.png" style="width: 12rpx; height: 21rpx;margin-left: 10rpx;"></image>
 	 </view>
 </view>
-<view class="list bg1" style="margin-bottom: 200rpx;"  bindtap="intoPath" data-path="/pages/feedback/feedback">
+<view class="list bg1" style="margin-bottom: 200rpx;"  bindtap="intoPath" data-path="/pages/about/about">
 	<view class="ilblock color1 font30">关于秀橱</view>
 	<view class="color2 font24 flo-right">
 	 <image src="../../image/appointment-icon2.png" style="width: 12rpx; height: 21rpx;margin-left: 10rpx;"></image>

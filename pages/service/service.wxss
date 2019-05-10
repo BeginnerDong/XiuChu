@@ -1,0 +1,30 @@
+page{
+	background: #F2F2F2;
+}
+.box-img{
+	width: 100%;
+	height: 606rpx;
+}
+.box-img image{
+	width:100%;
+	height:100%;
+}
+.text-box{
+	box-sizing: border-box;
+	padding:5%;
+	margin-bottom: 20rpx;
+}
+.text-title{
+	font-size: 56rpx;
+	text-align: center;
+}
+.title-btm{
+	text-align: center;
+	margin-top: 20rpx;
+	margin-bottom: 60rpx;
+}
+.text{
+	margin-top: 30rpx;
+	line-height:40rpx;
+	text-align: justify;
+}

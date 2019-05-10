@@ -33,10 +33,10 @@
 		</view>
 	</view>
 </view>
-<view class="video-box" style="display: none;">
+<view class="video-box" wx:if="{{is_show}}">
 	<view class="video">
 		<image src="../../image/微信图片_20190509104739.png" style="width: 100%;height: 100%;"></image>
-		<view class="color5 radiu50 font24" style="height: 100rpx; width: 100rpx; background: #000000; position: absolute; top: 0rpx;right: 0rpx;line-height: 100rpx; text-align: center; ">跳过</view>
+		<view class="color5 radiu50 font24" style="height: 100rpx; width: 100rpx; background: #000000; position: absolute; top: 0rpx;right: 0rpx;line-height: 100rpx; text-align: center;" bindtap="show">跳过</view>
 		<image src="../../image/play-icon.png" style="width: 110rpx; height: 110rpx;position:absolute; top: 44%; left: 45%;"></image>
 	</view>
 </view>

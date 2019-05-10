@@ -12,7 +12,9 @@
 		"pages/coupon_a/coupon_a",
 		"pages/myscore/myscore",
 		"pages/mysize/mysize",
-		"pages/add_size/add_size"
+		"pages/add_size/add_size",
+		"pages/service/service",
+		"pages/about/about"
 		
   ],
   "window":{
