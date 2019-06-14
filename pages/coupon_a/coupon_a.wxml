@@ -1,11 +1,11 @@
 <view class="topnav bg1">
-	<view class="top-item itemstar {{num == 0?'itemstar':''}}" data-id="0" bindtap="{{web_buttonCanClick?'menuClick':''}}">
+	<view class="top-item  {{num == 0?'itemstar':''}}" data-num="0" bindtap="{{web_buttonCanClick?'menuClick':''}}">
 		已领取
 	</view>
-	<view class="top-item {{num == 1?'itemstar':''}}" data-id="1" bindtap="{{web_buttonCanClick?'menuClick':''}}">
+	<view class="top-item {{num == 1?'itemstar':''}}" data-num="1" bindtap="{{web_buttonCanClick?'menuClick':''}}">
 		已使用
 	</view>
-	<view class="top-item {{num == 2?'itemstar':''}}" data-id="2" bindtap="{{web_buttonCanClick?'menuClick':''}}">
+	<view class="top-item {{num == 2?'itemstar':''}}" data-num="2" bindtap="{{web_buttonCanClick?'menuClick':''}}">
 		已过期
 	</view>
 </view>
@@ -24,33 +24,16 @@
 		</view>
 	</view>
 </view> -->
-<view class="box" style="background: url(../../image/001.png) no-repeat; background-size: 100%;">
-	<view class="box-top">
-		<view class="color5 box-left ilblock">
-			<view style="font-size: 110rpx;">30<text class="font30">元</text>
+<block wx:for="{{web_mainData}}" wx:key="id">
+	<view class="box">
+		<image src="{{item.use_step==1?'/image/002.png':(item.use_step==2?'/image/003.png':'/image/004.png')}}" style="position: relative;"></image>
+		<view class="box-top" style="position: absolute;top:0">
+			<view class="color5 box-left ilblock" style="width:200%">
+				<view style="font-size: 110rpx;">{{item.discount}}<text class="font30">元</text>
+				</view>
+				<view class="font22 text1">{{item.title}}</view>
+				<view style="font-size: 14rpx;">{{item.create_time}}-{{item.invalid_time}}</view>
 			</view>
-			<view class="font22 text1">满399元使用</view>
-			<view style="font-size: 14rpx;">2019年4月3日-2019年5月15日</view>
 		</view>
 	</view>
-</view>
-<view class="box" style="background: url(../../image/002.png) no-repeat; background-size: 100%;">
-	<view class="box-top">
-		<view class="color5 box-left ilblock">
-			<view style="font-size: 110rpx;">30<text class="font30">元</text>
-			</view>
-			<view class="font22 text1">满399元使用</view>
-			<view style="font-size: 14rpx;">2019年4月3日-2019年5月15日</view>
-		</view>
-	</view>
-</view>
-<view class="box" style="background: url(../../image/003.png) no-repeat; background-size: 100%;">
-	<view class="box-top">
-		<view class="color5 box-left ilblock">
-			<view style="font-size: 110rpx;">30<text class="font30">元</text>
-			</view>
-			<view class="font22 text1">满399元使用</view>
-			<view style="font-size: 14rpx;">2019年4月3日-2019年5月15日</view>
-		</view>
-	</view>
-</view>
+</block>

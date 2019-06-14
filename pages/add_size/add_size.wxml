@@ -1,26 +1,38 @@
 <view class="list bg1">
 	<view class="ilblock color1 font26">身高<text class="color3 font20">cm</text></view>
-	<input class="ilblock color2 font22" placeholder="请输入身高" style="margin-left: 50rpx;position: relative; top: 17rpx;"/>
+	<input class="ilblock color2 font22" placeholder="请输入身高" style="margin-left: 50rpx;position: relative; top: 17rpx;" 
+	value="{{web_mainData.height}}"  data-key="height" bindblur="inputChange"/>
 </view>
 <view class="list bg1">
-	<view class="ilblock color1 font26">体重<text class="color3 font20">cm</text></view>
-	<input class="ilblock color2 font22" placeholder="请输入体重" style="margin-left: 50rpx;position: relative; top: 17rpx;"/>
+	<view class="ilblock color1 font26">体重<text class="color3 font20">kg</text></view>
+	<input class="ilblock color2 font22" placeholder="请输入体重" style="margin-left: 50rpx;position: relative; top: 17rpx;"
+	value="{{web_mainData.weight}}"  data-key="weight" bindblur="inputChange"/>
 </view>
 <view class="list bg1">
 	<view class="ilblock color1 font26">胸围<text class="color3 font20">cm</text></view>
-	<input class="ilblock color2 font22" placeholder="请输入胸围" style="margin-left: 50rpx;position: relative; top: 17rpx;"/>
-</view>
-<view class="list bg1">
-	<view class="ilblock color1 font26">身高<text class="color3 font20">cm</text></view>
-	<input class="ilblock color2 font22" placeholder="请输入腰围" style="margin-left: 50rpx;position: relative; top: 17rpx;"/>
+	<input class="ilblock color2 font22" placeholder="请输入胸围" style="margin-left: 50rpx;position: relative; top: 17rpx;"
+	value="{{web_mainData.bust}}"  data-key="bust" bindblur="inputChange"/>
 </view>
 <view class="list bg1">
 	<view class="ilblock color1 font26">腰围<text class="color3 font20">cm</text></view>
-	<input class="ilblock color2 font22" placeholder="请输入臂长" style="margin-left: 50rpx;position: relative; top: 17rpx;"/>
+	<input class="ilblock color2 font22" placeholder="请输入腰围" style="margin-left: 50rpx;position: relative; top: 17rpx;"
+	value="{{web_mainData.waistline}}"  data-key="waistline" bindblur="inputChange"/>
+</view>
+<view class="list bg1">
+	<view class="ilblock color1 font26">臂长<text class="color3 font20">cm</text></view>
+	<input class="ilblock color2 font22" placeholder="请输入臂长" style="margin-left: 50rpx;position: relative; top: 17rpx;"
+	value="{{web_mainData.arm_length}}"  data-key="arm_length" bindblur="inputChange"/>
 </view>
 <view class="list bg1">
 	<view class="ilblock color1 font26">肩宽<text class="color3 font20">cm</text></view>
-	<input class="ilblock color2 font22" placeholder="请输入肩宽" style="margin-left: 50rpx;position: relative; top: 17rpx;"/>
+	<input class="ilblock color2 font22" placeholder="请输入肩宽" style="margin-left: 50rpx;position: relative; top: 17rpx;"
+	value="{{web_mainData.shoulder_width}}"  data-key="shoulder_width" bindblur="inputChange"/>
+</view>
+<view class="list bg1">
+	<view class="ilblock color1 font26">设为默认尺寸</view>
+	<view class="body-view" style="display: inline-block;float: right;">
+		<switch bindchange="switch2Change" checked="{{web_isdefault==1?true:''}}"/>
+	</view>
 </view>
 
-<button class="bg3 radiu15 font24 color5" type="button"bindtap="intoPath" data-path="/pages/add_size/add_size">确认</button>
+<button class="bg3 radiu15 font24 color5" type="button" bindtap="{{web_buttonCanClick?'submit':''}}">确认</button>

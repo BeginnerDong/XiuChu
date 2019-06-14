@@ -13,13 +13,16 @@
 		</view>
 	</view>
 </view> -->
-<view class="box" style="background: url(../../image/003.png) no-repeat; background-size: 100%;">
-	<view class="box-top">
-		<view class="color5 box-left ilblock">
-			<view style="font-size: 110rpx;">30<text class="font30">元</text>
+<block wx:for="{{web_mainData}}" wx:key="id">
+	<view class="box"  bindtap="{{web_buttonCanClick?'couponAdd':''}}" data-id="{{item.id}}">
+		<image src="../../image/001.png" style="position: relative;"></image>
+		<view class="box-top" style="position: absolute;top:0">
+			<view class="color5 box-left ilblock" style="width:200%">
+				<view style="font-size: 110rpx;">{{item.discount}}<text class="font30">元</text>
+				</view>
+				<view class="font22 text1">{{item.title}}</view>
+				<view style="font-size: 14rpx;">领取后，有效期{{item.valid_time/86400000}}天</view>
 			</view>
-			<view class="font22 text1">满399元使用</view>
-			<view style="font-size: 14rpx;">2019年4月3日-2019年5月15日</view>
 		</view>
 	</view>
-</view>
+</block>

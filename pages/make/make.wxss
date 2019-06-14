@@ -7,7 +7,7 @@ page{
 }
 .list-left{
 	border-bottom: solid 1rpx #EFEFEF;
-	width: 50%;
+	width: 48%;
 	height: 90rpx;
 	line-height:90rpx;
 	box-sizing: border-box;

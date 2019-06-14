@@ -1,91 +1,96 @@
 <view class="bg1 store">
-	<view class="text font30 color1">默认尺码</view>
-	<view class="list-left ilblock">
-		<view class="ilblock color1 font26">身高<text class="color3 font20">cm</text></view>
-		<view class="font22 color3 ilblock" style="margin-left: 50rpx;">183</view>
+	<view style="padding: 0 5%;">
+		<view class="font30 color1 ilblock">默认尺码</view>
+		<view class="font22 color3 ilblock flo-right" style="line-height: 50rpx;"  bindtap="intoPath" data-path="/pages/mysize/mysize">
+			选择/更换尺码<image src="../../image/appointment-icon2.png" style="width: 12rpx; height: 22rpx; margin-left: 20rpx;position: relative;top: 3rpx; "></image>
+		</view>
 	</view>
 	<view class="list-left ilblock">
-		<view class="ilblock color1 font26">体重<text class="color3 font20">cm</text></view>
-		<view class="font22 color3 ilblock" style="margin-left: 50rpx;">70</view>
+		<view class="ilblock color1 font26">身高<text class="color3 font20">cm</text></view>
+		<view class="font22 color3 ilblock" style="margin-left: 50rpx;">{{web_sizeData.height}}</view>
+	</view>
+	<view class="list-left ilblock">
+		<view class="ilblock color1 font26">体重<text class="color3 font20">kg</text></view>
+		<view class="font22 color3 ilblock" style="margin-left: 50rpx;">{{web_sizeData.weight}}</view>
 	</view>
 	<view class="list-left ilblock">
 		<view class="ilblock color1 font26">胸围<text class="color3 font20">cm</text></view>
-		<view class="font22 color3 ilblock" style="margin-left: 50rpx;">60</view>
+		<view class="font22 color3 ilblock" style="margin-left: 50rpx;">{{web_sizeData.bust}}</view>
 	</view>
 	<view class="list-left ilblock">
 		<view class="ilblock color1 font26">腰围<text class="color3 font20">cm</text></view>
-		<view class="font22 color3 ilblock" style="margin-left: 50rpx;">60</view>
+		<view class="font22 color3 ilblock" style="margin-left: 50rpx;">{{web_sizeData.waistline}}</view>
 	</view>
 	<view class="list-left ilblock">
 		<view class="ilblock color1 font26">臂长<text class="color3 font20">cm</text></view>
-		<view class="font22 color3 ilblock" style="margin-left: 50rpx;">42</view>
+		<view class="font22 color3 ilblock" style="margin-left: 50rpx;">{{web_sizeData.arm_length}}</view>
 	</view>
 	<view class="list-left ilblock">
 		<view class="ilblock color1 font26">肩宽<text class="color3 font20">cm</text></view>
-		<view class="font22 color3 ilblock" style="margin-left: 50rpx;">36</view>
+		<view class="font22 color3 ilblock" style="margin-left: 50rpx;">{{web_sizeData.shoulder_width}}</view>
 	</view>
 </view>
 <view class="bg2"></view>
-<view class="bg1 bag">
+<view class="bg1 bag" wx:if="{{!web_showCoupon}}">
 	<view class="font30 color1 ilblock">
 		优惠券
 	</view>
-	<view class="font22 color3 ilblock flo-right">
-		请选择<image src="../../image/appointment-icon2.png" style="width: 12rpx; height: 22rpx; margin-left: 20rpx;position: relative;top: 3rpx; "></image>
+	<view class="font22 color3 ilblock flo-right" bindtap="ifShowCoupon">
+		{{web_couponData.length==0?'无可用优惠券':(web_pay.coupon.length>0?web_couponData[web_couponIndex].snap_coupon.title:'请选择')}}<image src="../../image/appointment-icon2.png" style="width: 12rpx; height: 22rpx; margin-left: 20rpx;position: relative;top: 3rpx; "></image>
 	</view>
 </view>
-<view class="bg1 bag2"  style="display: none;">
+<view class="bg1 bag2" wx:if="{{web_showCoupon}}">
 	<view class="font30 color1 ilblock flo-left">
 		优惠券
 	</view>
 	<view class="ilblock font22 color3" style="line-height: 40rpx; margin-left: 50rpx;">
-		<view>满减优惠100减10</view>
-		<view>满减优惠100减10</view>
-		<view>满减优惠100减10</view>
+		<block  wx:for="{{web_couponData}}" wx:key="id">
+			<view data-index="{{index}}" bindtap="useCoupon">{{item.snap_coupon.title}}</view>
+		</block>
 	</view>
-	<view class="font22 color3 ilblock flo-right">
+	<view class="font22 color3 ilblock flo-right" bindtap="ifShowCoupon">
 		<image src="../../image/appointment-icon1.png" style="width: 22rpx; height: 12rpx;"></image>
 	</view>
 </view>
 <view class="bg2"></view>
 <view class="choose bg1">
 	<view class="choose-top">
-		<view class="ilblock font24 color2">
-			<image src="../../image/appointment-icon3.png"></image>
+		<view class="ilblock font24 color2" bindtap="selectModel" data-type="deliver">
+			<image src="{{web_buttonType=='deliver'?'../../image/appointment-icon3.png':'../../image/address-icon4.png'}}"></image>
 			送货上门
 		</view>
-		<view class="ilblock font24 color2" style="margin-left: 60rpx; margin-right: 10rpx;">
-			<image src="../../image/address-icon4.png"></image>
+		<view class="ilblock font24 color2" style="margin-left: 60rpx; margin-right: 10rpx;" bindtap="selectModel" data-type="pick">
+			<image src="{{web_buttonType=='pick'?'../../image/appointment-icon3.png':'../../image/address-icon4.png'}}"></image>
 			上门自提
 		</view>
 	</view>
-	<view class="choose-btm"  bindtap="intoPath" data-path="/pages/address/address">
+	<view class="choose-btm"  bindtap="intoPath" data-path="/pages/address/address" wx:if="{{web_buttonType=='deliver'}}">
 		<view class="font22 color3 ilblock" style="line-height: 40rpx;">
 			<view>
-				张三<text style="margin-left: 20rpx;">15645354589</text>
+				{{web_addressData.name}}<text style="margin-left: 20rpx;">{{web_addressData.phone}}</text>
 			</view>
 			<view>
-				陕西省西安市雁塔区高新大都会
+				{{web_addressData.city+web_addressData.detail}}
 			</view>
 		</view>
 		<view class="ilblock flo-right">
 			<image src="../../image/appointment-icon2.png" style="width: 12rpx; height: 22rpx;"></image>
 		</view>
 	</view>
-	<view class="choose-btm" style="display: none;">
+	<view class="choose-btm" wx:if="{{web_buttonType=='pick'}}">
 		<view class="font22 color2 ilblock" style="line-height: 45rpx;">
 			<view class="font26">
-				门店名称门店名称
+				{{web_storeData.description}}
 			</view>
 			<view>
-				陕西省西安市雁塔区高新大都会
+				{{web_storeData.url}}
 			</view>
 		</view>
-		<view class="ilblock flo-right">
+		<view class="ilblock flo-right" bindtap="toMap">
 			<image src="../../image/navigation.png" style="width: 35rpx; height: 38rpx; position: relative;top: 20rpx;"></image>
 		</view>
 	</view>
 </view>
-	<button class="bg3 color5 font26" style="width: 80%;margin-top: 200rpx;">预约下单</button>
+	<button class="bg3 color5 font26" style="width: 80%;margin-top: 200rpx;" open-type="getUserInfo" bindgetuserinfo="{{web_buttonCanClick?'submit':''}}">预约下单</button>
 
 

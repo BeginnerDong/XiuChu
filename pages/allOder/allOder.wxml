@@ -1,101 +1,61 @@
 <!--logs.wxml-->
 <view class="topnav bg1">
-	<view class="top-item  {{num == 0?'itemstar':''}}" data-id="0" bindtap="{{web_buttonCanClick?'menuClick':''}}">
+	<view class="top-item  {{num == 0?'itemstar':''}}" data-num="0" bindtap="{{web_buttonCanClick?'menuClick':''}}">
 		全部
 	</view>
-	<view class="top-item {{num == 1?'itemstar':''}}" data-id="1" bindtap="{{web_buttonCanClick?'menuClick':''}}">
+	<view class="top-item {{num == 1?'itemstar':''}}" data-num="1" bindtap="{{web_buttonCanClick?'menuClick':''}}">
 		待支付
 	</view>
-	<view class="top-item {{num == 2?'itemstar':''}}" data-id="2" bindtap="{{web_buttonCanClick?'menuClick':''}}">
+	<view class="top-item {{num == 2?'itemstar':''}}" data-num="2" bindtap="{{web_buttonCanClick?'menuClick':''}}">
 		已支付
 	</view>
-	<view class="top-item {{num == 3?'itemstar':''}}" data-id="3" bindtap="{{web_buttonCanClick?'menuClick':''}}">
+	<view class="top-item {{num == 3?'itemstar':''}}" data-num="3" bindtap="{{web_buttonCanClick?'menuClick':''}}">
 		待收货
 	</view>
-	<view class="top-item {{num == 4?'itemstar':''}}" data-id="4" bindtap="{{web_buttonCanClick?'menuClick':''}}">
+	<view class="top-item {{num == 4?'itemstar':''}}" data-num="4" bindtap="{{web_buttonCanClick?'menuClick':''}}">
 		待取货
 	</view>
 </view>
-<view style="{{num == 0?'display:block':'display:none'}}">
-	<view class="bigbox bg1">
-			<view class="font24" style="height: 100rpx; line-height: 100rpx;">
-				<view class="color3 ilblock" style="margin-left: 30rpx;">交易时间：2018-08-30</view>
-				<view class="color4 ilblock flo-right" style="margin-right: 30rpx;">等待支付</view>
-			</view>
-			<view class="store">
-				<view class="ilblock radiu15 hiden store-img">
-					<image src="../../image/img1.png"></image>
-				</view>
-				<view class="store-text ilblock" style="margin-left: 30rpx;">
-					<view class="overflow1 font26 color1 text1">标题标题标题标题标题</view>
-					<view class="overflow1 font24 color2 text2">内容内容内容内容内容内容内容</view>
-					<view>
-						<view class="color7 font24 ilblock">x1</view>
-						<view class="color4 font24 ilblock flo-right" style="margin-top: 10rpx;">
-							￥566.00
-						</view>
-					</view>
-				</view>
-			</view>
-			<view class="font24 color3" style="box-sizing: border-box; padding-right: 5%;padding-left: 5%; margin-top: 20rpx;">
-				<view class="box-btm ilblock flo-right">去支付</view>
-				<view style="clear: both;"></view>
-			</view>
-		</view>
-		
+<view>
+	<block wx:for="{{web_mainData}}" wx:key="id">
 		<view class="bigbox bg1">
 			<view class="font24" style="height: 100rpx; line-height: 100rpx;">
-				<view class="color3 ilblock" style="margin-left: 30rpx;">交易时间：2018-08-30</view>
-				<view class="color4 ilblock flo-right" style="margin-right: 30rpx;">等待支付</view>
+				<view class="color3 ilblock" style="margin-left: 30rpx;">交易时间：{{item.create_time}}</view>
+				<view class="color4 ilblock flo-right" style="margin-right: 30rpx;" wx:if="{{item.pay_status=='0'}}">待支付</view>
+				<view class="color4 ilblock flo-right" style="margin-right: 30rpx;" wx:if="{{item.order_step=='3'}}">已完成</view>
+				
+				<view class="color4 ilblock flo-right" style="margin-right: 30rpx;" wx:if="{{item.pay_status == '1'&&item.transport_status =='0'&&item.transport_type == '1'}}">待发货</view>
+				<view class="color4 ilblock flo-right" style="margin-right: 30rpx;" wx:if="{{item.pay_status == '1'&&item.transport_status =='1'&&item.transport_type == '1'}}">待收货</view>
+				<view class="color4 ilblock flo-right" style="margin-right: 30rpx;" wx:if="{{item.transport_type == '2'&&item.pay_status =='1'}}">待取货</view>
 			</view>
-			<view class="store">
-				<view class="ilblock radiu15 hiden store-img">
-					<image src="../../image/img1.png"></image>
-				</view>
-				<view class="store-text ilblock" style="margin-left: 30rpx;">
-					<view class="overflow1 font26 color1 text1">标题标题标题标题标题</view>
-					<view class="overflow1 font24 color2 text2">内容内容内容内容内容内容内容</view>
-					<view>
-						<view class="color7 font24 ilblock">x1</view>
-						<view class="color4 font24 ilblock flo-right" style="margin-top: 10rpx;">
-							￥566.00
-						</view>
-					</view>
-				</view>
-			</view>
-			<view class="addres color2 font24 overflow1">
-				<image src="../../image/order-icon.png" style="width: 22rpx; height: 26rpx; margin-right: 10rpx;" ></image>
-				陕西省西安市雁塔区高新大都会
-				<image class="flo-right" src="../../image/navigation.png" style="width: 40rpx;height: 40rpx;"></image>
-			</view>
-			<view class="font24 color3" style="clear: both; box-sizing: border-box; padding-right: 5%;padding-left: 5%; margin-top: 40rpx;">
-				<view class="box-btm ilblock flo-right">去支付</view>
-				<view style="clear: both;"></view>
-			</view>
-		</view>
-		
-		
-		<view class="bigbox bg1">
-				<view class="font24" style="height: 100rpx; line-height: 100rpx;">
-					<view class="color3 ilblock" style="margin-left: 30rpx;">交易时间：2018-08-30</view>
-					<view class="color4 ilblock flo-right" style="margin-right: 30rpx;">等待支付</view>
-				</view>
+			<block wx:for="{{item.products}}" wx:for-item="c_item">
 				<view class="store">
 					<view class="ilblock radiu15 hiden store-img">
-						<image src="../../image/img1.png"></image>
+						<image src="{{c_item.snap_product.mainImg[0].url}}"></image>
 					</view>
 					<view class="store-text ilblock" style="margin-left: 30rpx;">
-						<view class="overflow1 font26 color1 text1">标题标题标题标题标题</view>
-						<view class="overflow1 font24 color2 text2">内容内容内容内容内容内容内容</view>
+						<view class="overflow1 font26 color1 text1">{{c_item.snap_product.title}}</view>
+						<view class="overflow1 font24 color2 text2">{{c_item.snap_product.description}}</view>
 						<view>
-							<view class="color7 font24 ilblock">x1</view>
+							<view class="color7 font24 ilblock">x{{c_item.count}}</view>
 							<view class="color4 font24 ilblock flo-right" style="margin-top: 10rpx;">
-								￥566.00
+								￥{{c_item.snap_product.price}}
 							</view>
 						</view>
 					</view>
 				</view>
+			</block>
+			<view class="addres color2 font24 overflow1" wx:if="{{item.transport_type=='2'}}">
+				<image src="../../image/order-icon.png" style="width: 22rpx; height: 26rpx; margin-right: 10rpx;"></image>
+				{{item.label[0].description}}
+				<image class="flo-right" src="../../image/navigation.png" style="width: 40rpx;height: 40rpx;"></image>
 			</view>
-	
+			<view class="font24 color3" style="clear: both; box-sizing: border-box; padding-right: 5%;padding-left: 5%; margin-top: 40rpx;">
+				<view class="box-btm ilblock flo-right" wx:if="{{item.pay_status=='0'}}">去支付</view>
+				<view class="box-btm ilblock flo-right"  wx:if="{{item.transport_status=='1'}}" bindtap="orderUpdate" data-index="{{index}}">确认收货</view>
+				<view class="box-btm ilblock flo-right"  wx:if="{{item.transport_type=='2'&&item.pay_status=='1'}}" bindtap="orderUpdate" data-index="{{index}}">确认取货</view>
+				<view style="clear: both;"></view>
+			</view>
+		</view>
+	</block>
 </view>
-

@@ -4,18 +4,21 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false
+		"autoAudits": false,
+		"checkInvalidKey": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.6.6",
-	"appid": "wxdd868581ee40a421",
+	"appid": "wx48f0537fb2637760",
 	"projectname": "XiuChu",
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,
@@ -34,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 80,
+			"current": 68,
 			"list": [
 				{
 					"id": -1,
@@ -445,10 +448,11 @@
 					"query": ""
 				},
 				{
-					"id": -1,
+					"id": 68,
 					"name": "商品详情",
 					"pathName": "pages/store_details/store_details",
-					"query": ""
+					"query": "id=2&user_no=U511453752307581",
+					"scene": null
 				},
 				{
 					"id": -1,
@@ -519,7 +523,15 @@
 				{
 					"id": -1,
 					"name": "关于",
-					"pathName": "pages/about/about"
+					"pathName": "pages/about/about",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "预约",
+					"pathName": "pages/make_oder/make_oder",
+					"query": "id=2",
+					"scene": null
 				}
 			]
 		}

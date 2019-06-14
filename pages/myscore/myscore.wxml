@@ -1,43 +1,22 @@
 <view class="bg3">
 	<view style="width: 100%;height: 30%;"></view>
-	<view class="color5 boxa">156.00</view>
+	<view class="color5 boxa">{{web_userData.info.balance}}</view>
 	<view class="color5 font24" style="text-align: center; margin-top: 20rpx;">佣金总额（元）</view>
 </view>
 
 <view class="buy-box bg1">
-	<view class="list bg1">
-		<view class="ilblock" style="line-height: 40rpx; width: 42%;">
-			<view class="color2 font26">张三</view>
-			<view class="color3 font24">2019-04-30</view>
+	<block wx:for="{{web_mainData}}" wx:key="id">
+		<view class="list bg1">
+			<view class="ilblock" style="line-height: 40rpx; width: 42%;">
+				<view class="color2 font26">{{item.user[0].nickname}}</view>
+				<view class="color3 font24">{{item.create_time}}</view>
+			</view>
+			<view class="ilblock" style="line-height: 40rpx; width: 30%;">
+				<view class="color2 font26">{{item.product[0].title}}</view>
+				<view class="color3 font24">￥{{item.product[0].price}}</view>
+			</view>
+			<view class="color4 font28 ilblock flo-right">+{{item.count}}</view>
 		</view>
-		<view class="ilblock" style="line-height: 40rpx; width: 30%;">
-			<view class="color2 font26">商品名称</view>
-			<view class="color3 font24">￥2356</view>
-		</view>
-		<view class="color4 font28 ilblock flo-right">+562</view>
-	</view>
-	<view class="list bg1">
-		<view class="ilblock" style="line-height: 40rpx; width: 42%;">
-			<view class="color2 font26">张三</view>
-			<view class="color3 font24">2019-04-30</view>
-		</view>
-		<view class="ilblock" style="line-height: 40rpx; width: 30%;">
-			<view class="color2 font26">商品名称</view>
-			<view class="color3 font24">￥2356</view>
-		</view>
-		<view class="color4 font28 ilblock flo-right">+562</view>
-	</view>
-	<view class="list bg1">
-		<view class="ilblock" style="line-height: 40rpx; width: 42%;">
-			<view class="color2 font26">张三</view>
-			<view class="color3 font24">2019-04-30</view>
-		</view>
-		<view class="ilblock" style="line-height: 40rpx; width: 30%;">
-			<view class="color2 font26">商品名称</view>
-			<view class="color3 font24">￥2356</view>
-		</view>
-		<view class="color4 font28 ilblock flo-right">+562</view>
-	</view>
-	
+	</block>
 </view>
 

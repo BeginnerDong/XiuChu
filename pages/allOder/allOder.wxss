@@ -19,7 +19,7 @@ page{
 .itemstar{
 	font-size: 30rpx;
 	color:#D5B880;
-	border-bottom: solid 5rpx #D5B880;
+	border-bottom: solid 3rpx #D5B880;
 }
 
 

@@ -1,18 +1,31 @@
 <view class="banner">
-	<swiper style="height: 100%;">
+<!-- 	<swiper style="height: 100%;">
 		<swiper-item>
 			<image src="../../image/home-img.png" style="width: 100%; height:100%;"></image>
 		</swiper-item>
 	</swiper>
-	<image src="../../image/play-icon.png" style="width: 100rpx; height: 100rpx;position:absolute; top: 24%; left: 44%;"></image>
+	<image src="../../image/play-icon.png" style="width: 100rpx; height: 100rpx;position:absolute; top: 24%; left: 44%;"></image> -->
+	<swiper indicator-dots="{{indicatorDotsTwo}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{verticalTwo}}"
+	 interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px"
+	 style="width:100%;height:100%" current="{{item.current}}" >
+		<block wx:for="{{web_mainData.bannerImg}}" wx:for-item="item"  wx:key="id">
+			<swiper-item>
+				<view style="width: 100%; height: 100%;">
+					<image src="{{item.url}}" style="width: 100%; height: 100%;" wx:if="{{item.type=='image'}}"></image>
+					<video src="{{item.url}}" style="width: 100%; height: 100%;" wx:if="{{item.type=='vedio'}}"></video>
+				</view>
+			</swiper-item>
+		</block>
+	</swiper>
 </view>
 <view class="box">
-	<view class="text1 overflow1 color1 font30">标题标题标题</view>
-	<view class="color3 font26">内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</view>
+	<view class="text1 overflow1 color1 font30">{{web_mainData.title}}</view>
+	<view class="color3 font26">{{web_mainData.description}}</view>
 	<view style="margin-top: 30rpx;">
-		<view class="color4 ilblock" style="font-size: 34rpx;">￥2235起</view>
+		<view class="color4 ilblock" style="font-size: 34rpx;">￥{{web_mainData.price}}起</view>
 		<view class="ilblock color3 font26 flo-right" style="line-height: 20rpx; margin-top: 10rpx;">
-			<image src="../../image/share.png" style="width: 30rpx; height: 32rpx; margin-right: 20rpx;"></image><text style="position: relative;top: -5rpx;">分享</text>
+			
+			<image src="../../image/share.png" style="width: 30rpx; height: 32rpx; margin-right: 20rpx;"></image><button class="font28 color" style="position: absolute;top: 76%;opacity: 0;" bindtap="onShareAppMessage" open-type="share">分享</button><text style="position: relative;top: -5rpx;">分享</text>
 		</view>
 	</view>
 </view>
@@ -21,11 +34,14 @@
 	<view class="mid-top color7 font30" style="text-align: center; margin-bottom: 30rpx;">
 		-商品详情-
 	</view>
-	<view style="width: 100%;">
-		<image src="../../image/details-img1.png" style="width: 100%; height: 1200rpx;"></image>
+	<view style="width: 100%;" class="font26">
+		<view class="content ql-editor">
+			<import src="../../wxParse/wxParse.wxml" />
+			<template is="wxParse" data="{{wxParseData:web_mainData.content}}" />
+		</view>
 	</view>
 </view>
 
 <view class="btm">
-	<button class="bg3 color5 font26" style="width: 80%;margin-top: 40rpx;" bindtap="intoPath" data-path="/pages/make_oder/make_oder">预约下单</button>
+	<button class="bg3 color5 font26" style="width: 80%;margin-top: 40rpx;" bindtap="intoPath" data-path="/pages/make_oder/make_oder?id={{web_mainData.id}}&user_no={{web_user_no}}">预约下单</button>
 </view>

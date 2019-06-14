@@ -1,25 +1,6 @@
-<view class="box-img">
-	<image src="../../image/details-img.png"></image>
-</view>
-<view class="text-box bg1">
-	<view class="text-title color7">售后服务准则</view>
-	<view class="title-btm color7 font24">———— 高端定制 触手可及 ————</view>
-	<view class="color1 font30 overflow1">一、标题标题标题标题标题标题</view>
-	<view class="text color2 font26">
-		内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
-	</view>
-</view>
-
-<view class="text-box bg1">
-	<view class="color1 font30 overflow1">一、标题标题标题标题标题标题</view>
-	<view class="text color2 font26">
-		内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
-	</view>
-</view>
-
-<view class="text-box bg1" style="margin-bottom: 100rpx;">
-	<view class="color1 font30 overflow1">一、标题标题标题标题标题标题</view>
-	<view class="text color2 font26">
-		内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容
+<view class="font26">
+	<view class="content ql-editor">
+		<import src="../../wxParse/wxParse.wxml" />
+		<template is="wxParse" data="{{wxParseData:web_mainData.content}}" />
 	</view>
 </view>

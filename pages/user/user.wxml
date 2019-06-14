@@ -1,15 +1,16 @@
-
 <view class="top bg6">
 	<view class="head radiu50 hiden ilblock">
-		<image src="../../image/about-icon1.png" style="width: 100%;height: 100%;"></image>
+		<open-data type="userAvatarUrl"></open-data>
 	</view>
-	<view class="ilblock color5 overflow1" style="font-size: 36rpx; margin-left: 35rpx; position: relative; top: -50rpx;">名称名称</view>
+	<view class="ilblock color5 overflow1" style="font-size: 36rpx; margin-left: 35rpx; position: relative; top: -38rpx;">
+		<open-data type="userNickName"></open-data>
+	</view>
 </view>
 <view class="list bg1" style="padding-top: 10rpx;" bindtap="intoPath" data-path="/pages/allOder/allOder">
 	<view class="ilblock color1 font30">我的订单</view>
 	<view class="color2 font24 flo-right">查看
-	 <image src="../../image/appointment-icon2.png" style="width: 12rpx; height: 22rpx;margin-left: 10rpx;"></image>
-	 </view>
+		<image src="../../image/appointment-icon2.png" style="width: 12rpx; height: 22rpx;margin-left: 10rpx;"></image>
+	</view>
 </view>
 
 <view class="cherose bg1">
@@ -41,45 +42,66 @@
 <view class="bg2"></view>
 <view class="card-box bg1">
 	<view class="ilblock card" bindtap="intoPath" data-path="/pages/coupon/coupon">
-		<image src="../../image/微信图片_20190509180557.png"></image>
+		<image src="../../image/addCoupon.png"></image>
 	</view>
 	<view class="ilblock card" style="margin-left: 8%;" bindtap="intoPath" data-path="/pages/coupon_a/coupon_a">
-		<image src="../../image/微信图片_20190509180605.png"></image>
+		<image src="../../image/myCoupon.png"></image>
 	</view>
 </view>
 <view class="list bg1" bindtap="intoPath" data-path="/pages/myscore/myscore">
 	<view class="ilblock color1 font30">我的佣金</view>
 	<view class="color2 font24 flo-right">
-	 <image src="../../image/appointment-icon2.png" style="width: 12rpx; height: 21rpx;margin-left: 10rpx;"></image>
-	 </view>
+		<image src="../../image/appointment-icon2.png" style="width: 12rpx; height: 21rpx;margin-left: 10rpx;"></image>
+	</view>
 </view>
-<view class="list bg1"  bindtap="intoPath" data-path="/pages/mysize/mysize">
+<view class="list bg1" bindtap="intoPath" data-path="/pages/mysize/mysize">
 	<view class="ilblock color1 font30">我的尺码</view>
 	<view class="color2 font24 flo-right">
-	 <image src="../../image/appointment-icon2.png" style="width: 12rpx; height: 21rpx;margin-left: 10rpx;"></image>
-	 </view>
+		<image src="../../image/appointment-icon2.png" style="width: 12rpx; height: 21rpx;margin-left: 10rpx;"></image>
+	</view>
 </view>
-<view class="list bg1"  bindtap="intoPath" data-path="/pages/address/address">
+<view class="list bg1" bindtap="intoPath" data-path="/pages/address/address">
 	<view class="ilblock color1 font30">收货地址</view>
 	<view class="color2 font24 flo-right">
-	 <image src="../../image/appointment-icon2.png" style="width: 12rpx; height: 21rpx;margin-left: 10rpx;"></image>
-	 </view>
+		<image src="../../image/appointment-icon2.png" style="width: 12rpx; height: 21rpx;margin-left: 10rpx;"></image>
+	</view>
 </view>
-<view class="list bg1"  bindtap="intoPath" data-path="/pages/service/service">
+<view class="list bg1" bindtap="intoPath" data-path="/pages/service/service">
 	<view class="ilblock color1 font30">售后准则</view>
 	<view class="color2 font24 flo-right">
-	 <image src="../../image/appointment-icon2.png" style="width: 12rpx; height: 21rpx;margin-left: 10rpx;"></image>
-	 </view>
+		<image src="../../image/appointment-icon2.png" style="width: 12rpx; height: 21rpx;margin-left: 10rpx;"></image>
+	</view>
 </view>
 <view class="list bg1">
 	<view class="ilblock color1 font30">联系客服</view>
+	<contact-button type="default-light" size="27" session-from="weapp" style="height:100%">
+	</contact-button>
+	<contact-button type="default-light" size="27" session-from="weapp" style="height:100%">
+	</contact-button>
+	<contact-button type="default-light" size="27" session-from="weapp" style="height:100%">
+	</contact-button>
+	<contact-button type="default-light" size="27" session-from="weapp" style="height:100%">
+	</contact-button>
+	<contact-button type="default-light" size="27" session-from="weapp" style="height:100%">
+	</contact-button>
+	<contact-button type="default-light" size="27" session-from="weapp" style="height:100%">
+	</contact-button>
+	<contact-button type="default-light" size="27" session-from="weapp" style="height:100%">
+	</contact-button>
+	<contact-button type="default-light" size="27" session-from="weapp" style="height:100%">
+	</contact-button>
+	<contact-button type="default-light" size="27" session-from="weapp" style="height:100%">
+	</contact-button>
+	<contact-button type="default-light" size="27" session-from="weapp" style="height:100%">
+	</contact-button>
 	<view class="color2 font24 flo-right">
-	 <image src="../../image/appointment-icon2.png" style="width: 12rpx; height: 21rpx;margin-left: 10rpx;"></image>
-	 </view>
+		<image src="../../image/appointment-icon2.png" style="width: 12rpx; height: 21rpx;margin-left: 10rpx;"></image>
+	</view>
 </view>
-<view class="list bg1" style="margin-bottom: 200rpx;"  bindtap="intoPath" data-path="/pages/about/about">
-	<view class="ilblock color1 font30">关于秀橱</view>
+
+<view class="list bg1" style="margin-bottom: 200rpx;" bindtap="intoPath" data-path="/pages/about/about">
+	<view class="ilblock color1 font30">关于西先</view>
 	<view class="color2 font24 flo-right">
-	 <image src="../../image/appointment-icon2.png" style="width: 12rpx; height: 21rpx;margin-left: 10rpx;"></image>
-	 </view>
+		<image src="../../image/appointment-icon2.png" style="width: 12rpx; height: 21rpx;margin-left: 10rpx;"></image>
+	</view>
 </view>

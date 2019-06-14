@@ -1,40 +1,24 @@
 <!--logs.wxml-->
-<view class="box bg1" style="border-top: solid 1rpx #E1E1E1;">
-	<view class="font24 color1">
-		张三<text class="color2" style="margin-left: 50rpx;">15632464563</text>
-	</view>
-	<view class="font24 color2" style="line-height: 50rpx;">
-		陕西省西安市高新区大都会
-	</view>
-	<view>
-		<view class="ilblock radiu50">
-			<image src="../../image/appointment-icon3.png" style="width: 22rpx;height: 22rpx; position: relative;top: 5rpx;"></image>
+<block wx:for="{{web_mainData}}"  wx:key="id">
+	<view class="box bg1" style="border-top: solid 1rpx #E1E1E1;">
+		<view class="font24 color1"  bindtap="choose" data-id="{{item.id}}">
+			{{item.name}}<text class="color2" style="margin-left: 50rpx;">{{item.phone}}</text>
 		</view>
-		<label class="color2 font22" style="margin-left: 10rpx;">默认地址</label>
-		
-		<view class="ilblock flo-right" style="margin-right: 60rpx;">
-			<view class="ilblock font20"><image src="../../image/address-icon1.png" style="width: 22rpx;height: 22rpx; margin-right: 20rpx;"></image><text class="color3">编辑</text></view>
-			<view class="ilblock font20" style="margin-left: 20px;"><image src="../../image/address-icon2.png" style="width: 24rpx;height: 22rpx; margin-right: 20rpx;"></image><text class="color3">删除</text></view>
+		<view class="font24 color2" style="line-height: 50rpx;"  bindtap="choose" data-id="{{item.id}}">
+			{{item.province+item.city+item.country+item.detail}}
 		</view>
-	</view>
-</view>
-<view class="bg2" style="width: 100%; height:20rpx ;"></view>
-<view class="box bg1">
-	<view class="font24 color1">
-		张三<text class="color2" style="margin-left: 50rpx;">15632464563</text>
-	</view>
-	<view class="font24 color2" style="line-height: 50rpx;">
-		陕西省西安市高新区大都会
-	</view>
-	<view>
-		<view class="ilblock radiu50">
-			<image src="../../image/address-icon4.png" style="width: 22rpx;height: 22rpx; position: relative;top: 5rpx;"></image>
-		</view>
-		<label class="color2 font22" style="margin-left: 10rpx;">默认地址</label>
-		<view class="ilblock flo-right" style="margin-right: 60rpx;">
-			<view class="ilblock font20"><image src="../../image/address-icon1.png" style="width: 22rpx;height: 22rpx; margin-right: 20rpx;"></image><text class="color3">编辑</text></view>
-			<view class="ilblock font20" style="margin-left: 20px;"><image src="../../image/address-icon2.png" style="width: 24rpx;height: 22rpx; margin-right: 20rpx;"></image><text class="color3">删除</text></view>
+		<view>
+			<view class="ilblock radiu50" bindtap="{{item.isdefault=='0'?(web_buttonCanClick?'updateAddress':''):''}}" data-id="{{item.id}}">
+				<image src="{{item.isdefault==1?'/image/appointment-icon3.png':'/image/appointment-icon4.png'}}" style="width: 22rpx;height: 22rpx; position: relative;top: 5rpx;"/>
+				
+			</view>	
+			<label class="color2 font22" style="margin-left: 10rpx;">{{item.isdefault==1?'默认地址':'选为默认地址'}}</label>
+			
+			<view class="ilblock flo-right" style="margin-right: 60rpx;">
+				<view class="ilblock font20" data-path="/pages/address_Add/address_Add?id={{item.id}}" bindtap="intoPath"><image src="../../image/address-icon1.png" style="width: 22rpx;height: 22rpx; margin-right: 20rpx;"></image><text class="color3">编辑</text></view>
+				<view class="ilblock font20"  data-id="{{item.id}}" bindtap="{{web_buttonCanClick?'deleteAddress':''}}" style="margin-left: 20px;"><image src="../../image/address-icon2.png" style="width: 24rpx;height: 22rpx; margin-right: 20rpx;"></image><text class="color3">删除</text></view>
+			</view>
 		</view>
 	</view>
-</view>
-	<button class="bg3 radiu40 font24 color5" style="line-height: 60rpx;" type="button"bindtap="intoPath" data-path="/pages/address_Add/address_Add">添加地址</button>
+</block>
+<button class="bg3 radiu40 font24 color5" style="line-height: 60rpx;" type="button"bindtap="intoPath" data-path="/pages/address_Add/address_Add">添加地址</button>
