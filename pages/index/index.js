@@ -17,7 +17,7 @@ Page({
 		vertical: true,
 		verticalTwo: false,
 		autoplay: false,
-
+		index: 0,
 		circular: true,
 		interval: 2000,
 		duration: 500,
@@ -27,7 +27,7 @@ Page({
 		is_show: true,
 		mainData: [],
 		searchItem: {},
-		isFirstLoadAllStandard: ['getMainData','getSliderData'],
+		isFirstLoadAllStandard: ['getMainData', 'getSliderData'],
 	},
 
 
@@ -35,7 +35,18 @@ Page({
 		const self = this;
 		api.commonInit(self);
 		self.getMainData()
-		self.getSliderData()
+		self.getSliderData();
+		self.setData({
+			web_index: self.data.index
+		})
+	},
+
+	slider(e) {
+		const self = this;
+		console.log(e.detail.current)
+		self.setData({
+			web_index: e.detail.current
+		})
 	},
 
 	getSliderData() {
@@ -48,8 +59,8 @@ Page({
 		const callback = (res) => {
 			console.log(1000, res);
 			if (res.info.data.length > 0) {
-				self.data.sliderData = res.info.data[0];		
-			}	
+				self.data.sliderData = res.info.data[0];
+			}
 			self.setData({
 				web_sliderData: self.data.sliderData,
 			});
@@ -97,7 +108,8 @@ Page({
 		const self = this;
 		console.log(111)
 		var index = api.getDataSet(e, 'index');
-		self.data.mainData[index].current = self.data.mainData[index].current > 0 ? self.data.mainData[index].current - 1 : self.data.mainData[index].mainImg.length - 1;
+		self.data.mainData[index].current = self.data.mainData[index].current > 0 ? self.data.mainData[index].current - 1 :
+			self.data.mainData[index].mainImg.length - 1;
 
 		self.setData({
 			web_mainData: self.data.mainData
@@ -108,7 +120,8 @@ Page({
 		const self = this;
 		console.log(222)
 		var index = api.getDataSet(e, 'index');
-		self.data.mainData[index].current = self.data.mainData[index].current < (self.data.mainData[index].mainImg.length - 1) ? self.data.mainData[index].current + 1 : 0;
+		self.data.mainData[index].current = self.data.mainData[index].current < (self.data.mainData[index].mainImg.length -
+			1) ? self.data.mainData[index].current + 1 : 0;
 		console.log(self.data.mainData[index].current)
 		self.setData({
 			web_mainData: self.data.mainData
@@ -116,22 +129,22 @@ Page({
 	},
 
 
-show(e) {
-	const self = this;
-	self.data.is_show = false;
-	self.setData({
-		is_show: self.data.is_show
-	})
-},
+	show(e) {
+		const self = this;
+		self.data.is_show = false;
+		self.setData({
+			is_show: self.data.is_show
+		})
+	},
 
-intoPathRedirect(e) {
-	const self = this;
-	api.pathTo(api.getDataSet(e, 'path'), 'redi');
-},
+	intoPathRedirect(e) {
+		const self = this;
+		api.pathTo(api.getDataSet(e, 'path'), 'redi');
+	},
 
-intoPath(e) {
-	const self = this;
-	api.pathTo(api.getDataSet(e, 'path'), 'nav');
-}
+	intoPath(e) {
+		const self = this;
+		api.pathTo(api.getDataSet(e, 'path'), 'nav');
+	}
 
 })

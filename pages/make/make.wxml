@@ -65,13 +65,16 @@
 		</view>
 	</view>
 	<view class="choose-btm"  bindtap="intoPath" data-path="/pages/address/address" wx:if="{{web_buttonType=='deliver'}}">
-		<view class="font22 color3 ilblock" style="line-height: 40rpx;">
+		<view class="font22 color3 ilblock" style="line-height: 40rpx;" wx:if="{{web_addressData.name}}">
 			<view>
 				{{web_addressData.name}}<text style="margin-left: 20rpx;">{{web_addressData.phone}}</text>
 			</view>
 			<view>
 				{{web_addressData.city+web_addressData.detail}}
 			</view>
+		</view>
+		<view class="font22 color3 ilblock" style="line-height: 40rpx;" wx:else>
+			请选择收货地址
 		</view>
 		<view class="ilblock flo-right">
 			<image src="../../image/appointment-icon2.png" style="width: 12rpx; height: 22rpx;"></image>

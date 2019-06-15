@@ -22,11 +22,12 @@ page {
 
 .top {
 	/* border: solid 1rpx red; */
-	width: 100%;
-	height: 100%;
+	width: 60px;
+	height: 160px;
 	position: absolute;
 
-	top: 0rpx;
+	bottom:20%;
+	right: 0;
 }
 
 .top-top {
@@ -45,7 +46,8 @@ page {
 .top-mid image {
 	width: 37rpx;
 	height: 37rpx;
-
+	position: relative;
+	top: -50rpx;
 }
 
 .top-mid-center {
